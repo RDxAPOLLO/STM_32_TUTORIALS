@@ -1,0 +1,44 @@
+14:51:00 **** Incremental Build of configuration Debug for project UART_INTERRUPT ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F072xB -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:11:1: error: unknown type name 'uint8_t'
+   11 | uint8_t rx;
+      | ^~~~~~~
+../Core/Src/main.c:1:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /* STM32F072B-DISCO USART1 interrupt echo fix
+../Core/Src/main.c:12:10: error: unknown type name 'uint8_t'
+   12 | volatile uint8_t received = 0;
+      |          ^~~~~~~
+../Core/Src/main.c:15:1: error: expected identifier or '(' before 'if'
+   15 | if (HAL_UART_Receive_IT(&huart1, &rx, 1) != HAL_OK)
+      | ^~
+../Core/Src/main.c:21:7: error: unknown type name 'uint8_t'
+   21 | const uint8_t startup_msg[] = "\r\nUSART1 ready - type a character:\r\n";
+      |       ^~~~~~~
+../Core/Src/main.c:21:31: error: array of inappropriate type initialized from string constant
+   21 | const uint8_t startup_msg[] = "\r\nUSART1 ready - type a character:\r\n";
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:22:1: error: expected identifier or '(' before 'if'
+   22 | if (HAL_UART_Transmit(&huart1, (uint8_t *)startup_msg,
+      | ^~
+../Core/Src/main.c:29:1: error: expected identifier or '(' before 'while'
+   29 | while (1)
+      | ^~~~~
+../Core/Src/main.c:50:30: error: unknown type name 'UART_HandleTypeDef'
+   50 | void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'USART1_IRQHandler':
+../Core/Src/main.c:62:5: warning: implicit declaration of function 'HAL_UART_IRQHandler'; did you mean 'USART1_IRQHandler'? [-Wimplicit-function-declaration]
+   62 |     HAL_UART_IRQHandler(&huart1);
+      |     ^~~~~~~~~~~~~~~~~~~
+      |     USART1_IRQHandler
+../Core/Src/main.c:62:26: error: 'huart1' undeclared (first use in this function)
+   62 |     HAL_UART_IRQHandler(&huart1);
+      |                          ^~~~~~
+../Core/Src/main.c:62:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+14:51:01 Build Failed. 10 errors, 1 warnings. (took 985ms)
+

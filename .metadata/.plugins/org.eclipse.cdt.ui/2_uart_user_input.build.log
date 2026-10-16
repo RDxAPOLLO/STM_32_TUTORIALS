@@ -1,0 +1,16 @@
+14:31:25 **** Build of configuration Debug for project 2_uart_user_input ****
+make -j16 all 
+arm-none-eabi-gcc -o "2_uart_user_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\stm32_tuitorials\2_uart_user_input\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_uart_user_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_uart_user_input.elf
+ 
+arm-none-eabi-size  2_uart_user_input.elf 
+arm-none-eabi-objdump -h -S 2_uart_user_input.elf  > "2_uart_user_input.list"
+   text	   data	    bss	    dec	    hex	filename
+   9172	     12	   1716	  10900	   2a94	2_uart_user_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_uart_user_input.list
+ 
+
+14:31:29 Build Finished. 0 errors, 0 warnings. (took 3s.473ms)
+

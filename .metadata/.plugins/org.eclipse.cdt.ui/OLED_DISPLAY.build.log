@@ -1,0 +1,316 @@
+00:02:41 **** Incremental Build of configuration Debug for project OLED_DISPLAY ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc "../Core/Src/ssd1306_fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306_fonts.d" -MT"Core/Src/ssd1306_fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306_fonts.o"
+arm-none-eabi-gcc "../Core/Src/ssd1306_tests.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306_tests.d" -MT"Core/Src/ssd1306_tests.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306_tests.o"
+In file included from ../Core/Inc/ssd1306.h:12,
+                 from ../Core/Inc/ssd1306_fonts.h:4,
+                 from ../Core/Src/ssd1306_fonts.c:2:
+../Core/Inc/ssd1306_conf.h: In function 'main':
+In file included from ../Core/Inc/ssd1306.h:12,
+                 from ../Core/Src/ssd1306.c:1:
+../Core/Inc/ssd1306_conf.h: In function 'main':
+../Core/Inc/ssd1306_conf.h:93:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:93:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+In file included from ../Core/Inc/ssd1306.h:12,
+                 from ../Core/Src/main.c:16:
+../Core/Inc/ssd1306_conf.h: In function 'main':
+../Core/Inc/ssd1306_conf.h:93:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:3: warning: implicit declaration of function 'ssd1306_Fill' [-Wimplicit-function-declaration]
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:3: warning: implicit declaration of function 'ssd1306_Fill' [-Wimplicit-function-declaration]
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:16: error: 'Black' undeclared (first use in this function)
+   96 |   ssd1306_Fill(Black);
+      |                ^~~~~
+../Core/Inc/ssd1306_conf.h:96:16: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Inc/ssd1306_conf.h:96:16: error: 'Black' undeclared (first use in this function)
+   96 |   ssd1306_Fill(Black);
+      |                ^~~~~
+../Core/Inc/ssd1306_conf.h:96:16: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Inc/ssd1306_conf.h:96:3: warning: implicit declaration of function 'ssd1306_Fill' [-Wimplicit-function-declaration]
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:16: error: 'Black' undeclared (first use in this function)
+   96 |   ssd1306_Fill(Black);
+      |                ^~~~~
+../Core/Inc/ssd1306_conf.h:96:16: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../Core/Inc/ssd1306.h:12,
+                 from ../Core/Src/ssd1306_tests.c:3:
+../Core/Inc/ssd1306_conf.h: In function 'main':
+../Core/Inc/ssd1306_conf.h:93:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:99:3: warning: implicit declaration of function 'ssd1306_SetCursor' [-Wimplicit-function-declaration]
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:99:3: warning: implicit declaration of function 'ssd1306_SetCursor' [-Wimplicit-function-declaration]
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:99:3: warning: implicit declaration of function 'ssd1306_SetCursor' [-Wimplicit-function-declaration]
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:3: warning: implicit declaration of function 'ssd1306_Fill' [-Wimplicit-function-declaration]
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:16: error: 'Black' undeclared (first use in this function)
+   96 |   ssd1306_Fill(Black);
+      |                ^~~~~
+../Core/Inc/ssd1306_conf.h:96:16: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Inc/ssd1306_conf.h:102:3: warning: implicit declaration of function 'ssd1306_WriteString' [-Wimplicit-function-declaration]
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:3: warning: implicit declaration of function 'ssd1306_WriteString' [-Wimplicit-function-declaration]
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:3: warning: implicit declaration of function 'ssd1306_WriteString' [-Wimplicit-function-declaration]
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:38: error: 'Font_6x8' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                      ^~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:38: error: 'Font_6x8' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                      ^~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:38: error: 'Font_6x8' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                      ^~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:48: error: 'White' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                                ^~~~~
+../Core/Inc/ssd1306_conf.h:102:48: error: 'White' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                                ^~~~~
+../Core/Inc/ssd1306_conf.h:102:48: error: 'White' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                                ^~~~~
+../Core/Inc/ssd1306_conf.h:99:3: warning: implicit declaration of function 'ssd1306_SetCursor' [-Wimplicit-function-declaration]
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:105:3: warning: implicit declaration of function 'ssd1306_UpdateScreen' [-Wimplicit-function-declaration]
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:105:3: warning: implicit declaration of function 'ssd1306_UpdateScreen' [-Wimplicit-function-declaration]
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h: At top level:
+../Core/Inc/ssd1306.h: At top level:
+../Core/Inc/ssd1306.h:102:2: error: #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+  102 | #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+      |  ^~~~~
+../Core/Inc/ssd1306.h:102:2: error: #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+  102 | #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+      |  ^~~~~
+../Core/Inc/ssd1306.h:152:6: warning: conflicting types for 'ssd1306_Init'; have 'void(void)'
+  152 | void ssd1306_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306.h:152:6: warning: conflicting types for 'ssd1306_Init'; have 'void(void)'
+  152 | void ssd1306_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:93:3: note: previous implicit declaration of 'ssd1306_Init' with type 'void(void)'
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:93:3: note: previous implicit declaration of 'ssd1306_Init' with type 'void(void)'
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306.h:153:6: warning: conflicting types for 'ssd1306_Fill'; have 'void(SSD1306_COLOR)'
+  153 | void ssd1306_Fill(SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:3: note: previous implicit declaration of 'ssd1306_Fill' with type 'void(SSD1306_COLOR)'
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306.h:153:6: warning: conflicting types for 'ssd1306_Fill'; have 'void(SSD1306_COLOR)'
+  153 | void ssd1306_Fill(SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306.h:154:6: warning: conflicting types for 'ssd1306_UpdateScreen'; have 'void(void)'
+  154 | void ssd1306_UpdateScreen(void);
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:3: warning: implicit declaration of function 'ssd1306_WriteString' [-Wimplicit-function-declaration]
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:3: note: previous implicit declaration of 'ssd1306_Fill' with type 'void(SSD1306_COLOR)'
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:105:3: note: previous implicit declaration of 'ssd1306_UpdateScreen' with type 'void(void)'
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:105:3: warning: implicit declaration of function 'ssd1306_UpdateScreen' [-Wimplicit-function-declaration]
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:154:6: warning: conflicting types for 'ssd1306_UpdateScreen'; have 'void(void)'
+  154 | void ssd1306_UpdateScreen(void);
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:157:6: error: conflicting types for 'ssd1306_WriteString'; have 'char(char *, SSD1306_Font_t,  SSD1306_COLOR)'
+  157 | char ssd1306_WriteString(char* str, SSD1306_Font_t Font, SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h: At top level:
+../Core/Inc/ssd1306_conf.h:105:3: note: previous implicit declaration of 'ssd1306_UpdateScreen' with type 'void(void)'
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:3: note: previous implicit declaration of 'ssd1306_WriteString' with type 'int()'
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:157:6: error: conflicting types for 'ssd1306_WriteString'; have 'char(char *, SSD1306_Font_t,  SSD1306_COLOR)'
+  157 | char ssd1306_WriteString(char* str, SSD1306_Font_t Font, SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:102:2: error: #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+  102 | #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+      |  ^~~~~
+../Core/Inc/ssd1306_conf.h:102:38: error: 'Font_6x8' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                      ^~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:3: note: previous implicit declaration of 'ssd1306_WriteString' with type 'int()'
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:158:6: warning: conflicting types for 'ssd1306_SetCursor'; have 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+  158 | void ssd1306_SetCursor(uint8_t x, uint8_t y);
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:152:6: warning: conflicting types for 'ssd1306_Init'; have 'void(void)'
+  152 | void ssd1306_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:99:3: note: previous implicit declaration of 'ssd1306_SetCursor' with type 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:158:6: warning: conflicting types for 'ssd1306_SetCursor'; have 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+  158 | void ssd1306_SetCursor(uint8_t x, uint8_t y);
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:93:3: note: previous implicit declaration of 'ssd1306_Init' with type 'void(void)'
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:48: error: 'White' undeclared (first use in this function)
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                                ^~~~~
+../Core/Inc/ssd1306_conf.h:99:3: note: previous implicit declaration of 'ssd1306_SetCursor' with type 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:153:6: warning: conflicting types for 'ssd1306_Fill'; have 'void(SSD1306_COLOR)'
+  153 | void ssd1306_Fill(SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:3: note: previous implicit declaration of 'ssd1306_Fill' with type 'void(SSD1306_COLOR)'
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+../Core/Inc/ssd1306.h:154:6: warning: conflicting types for 'ssd1306_UpdateScreen'; have 'void(void)'
+  154 | void ssd1306_UpdateScreen(void);
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:105:3: note: previous implicit declaration of 'ssd1306_UpdateScreen' with type 'void(void)'
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:157:6: error: conflicting types for 'ssd1306_WriteString'; have 'char(char *, SSD1306_Font_t,  SSD1306_COLOR)'
+  157 | char ssd1306_WriteString(char* str, SSD1306_Font_t Font, SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:102:3: note: previous implicit declaration of 'ssd1306_WriteString' with type 'int()'
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:158:6: warning: conflicting types for 'ssd1306_SetCursor'; have 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+  158 | void ssd1306_SetCursor(uint8_t x, uint8_t y);
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:99:3: note: previous implicit declaration of 'ssd1306_SetCursor' with type 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:63:5: error: redefinition of 'main'
+   63 | int main(void)
+      |     ^~~~
+../Core/Inc/ssd1306_conf.h:64:5: note: previous definition of 'main' with type 'int(void)'
+   64 | int main(void)
+      |     ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:38: error: 'Font_6x8' undeclared (first use in this function)
+  101 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |                                      ^~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:124:6: error: redefinition of 'SystemClock_Config'
+  124 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:125:6: note: previous definition of 'SystemClock_Config' with type 'void(void)'
+  125 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:177:13: error: redefinition of 'MX_I2C1_Init'
+  177 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:169:13: note: previous definition of 'MX_I2C1_Init' with type 'void(void)'
+  169 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:105:3: warning: implicit declaration of function 'ssd1306_UpdateScreen' [-Wimplicit-function-declaration]
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:220:13: error: redefinition of 'MX_GPIO_Init'
+  220 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:212:13: note: previous definition of 'MX_GPIO_Init' with type 'void(void)'
+  212 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:254:6: error: redefinition of 'Error_Handler'
+  254 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Inc/ssd1306.h: At top level:
+../Core/Inc/ssd1306_conf.h:244:6: note: previous definition of 'Error_Handler' with type 'void(void)'
+  244 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:102:2: error: #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+  102 | #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
+      |  ^~~~~
+../Core/Inc/ssd1306.h:152:6: warning: conflicting types for 'ssd1306_Init'; have 'void(void)'
+  152 | void ssd1306_Init(void);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:93:3: note: previous implicit declaration of 'ssd1306_Init' with type 'void(void)'
+   93 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:220:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  220 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:177:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  177 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Inc/ssd1306.h:153:6: warning: conflicting types for 'ssd1306_Fill'; have 'void(SSD1306_COLOR)'
+  153 | void ssd1306_Fill(SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:96:3: note: previous implicit declaration of 'ssd1306_Fill' with type 'void(SSD1306_COLOR)'
+   96 |   ssd1306_Fill(Black);
+      |   ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/ssd1306_fonts.o] Error 1
+../Core/Inc/ssd1306.h:154:6: warning: conflicting types for 'ssd1306_UpdateScreen'; have 'void(void)'
+  154 | void ssd1306_UpdateScreen(void);
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:105:3: note: previous implicit declaration of 'ssd1306_UpdateScreen' with type 'void(void)'
+  105 |   ssd1306_UpdateScreen();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:157:6: error: conflicting types for 'ssd1306_WriteString'; have 'char(char *, SSD1306_Font_t,  SSD1306_COLOR)'
+  157 | char ssd1306_WriteString(char* str, SSD1306_Font_t Font, SSD1306_COLOR color);
+      |      ^~~~~~~~~~~~~~~~~~~
+make: *** Waiting for unfinished jobs....
+../Core/Inc/ssd1306_conf.h:102:3: note: previous implicit declaration of 'ssd1306_WriteString' with type 'int()'
+  102 |   ssd1306_WriteString("HELLO STM32", Font_6x8, White);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306.h:158:6: warning: conflicting types for 'ssd1306_SetCursor'; have 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+  158 | void ssd1306_SetCursor(uint8_t x, uint8_t y);
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Inc/ssd1306_conf.h:99:3: note: previous implicit declaration of 'ssd1306_SetCursor' with type 'void(uint8_t,  uint8_t)' {aka 'void(unsigned char,  unsigned char)'}
+   99 |   ssd1306_SetCursor(0, 0);
+      |   ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+../Core/Src/ssd1306_tests.c: In function 'ssd1306_TestFonts1':
+../Core/Src/ssd1306_tests.c:140:13: warning: unused variable 'y' [-Wunused-variable]
+  140 |     uint8_t y = 0;
+      |             ^
+../Core/Src/ssd1306.c:52:2: error: #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro"
+   52 | #error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro"
+      |  ^~~~~
+../Core/Src/ssd1306_tests.c: In function 'ssd1306_TestFPS':
+../Core/Src/ssd1306_tests.c:226:39: error: 'Font_11x18' undeclared (first use in this function)
+  226 |     ssd1306_WriteString("Testing...", Font_11x18, Black);
+      |                                       ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/ssd1306_tests.o] Error 1
+make: *** [Core/Src/subdir.mk:43: Core/Src/ssd1306.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+00:02:42 Build Failed. 33 errors, 39 warnings. (took 1s.153ms)
+

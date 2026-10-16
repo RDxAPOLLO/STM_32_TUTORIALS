@@ -1,0 +1,33 @@
+00:18:23 **** Incremental Build of configuration Debug for project i2c_oled ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:3: warning: implicit declaration of function 'SSD1306_Init' [-Wimplicit-function-declaration]
+   93 |   SSD1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:98:3: warning: implicit declaration of function 'SSD1306_Clear' [-Wimplicit-function-declaration]
+   98 |   SSD1306_Clear();
+      |   ^~~~~~~~~~~~~
+../Core/Src/main.c:100:6: warning: implicit declaration of function 'SSD1306_SetCursor' [-Wimplicit-function-declaration]
+  100 |      SSD1306_SetCursor(0, 0);
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:102:6: warning: implicit declaration of function 'SSD1306_WriteString' [-Wimplicit-function-declaration]
+  102 |      SSD1306_WriteString("HELLO STM32");
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:108:6: warning: implicit declaration of function 'SSD1306_UpdateScreen' [-Wimplicit-function-declaration]
+  108 |      SSD1306_UpdateScreen();
+      |      ^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "i2c_oled.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\stm32_tuitorial\i2c_oled\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="i2c_oled.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: i2c_oled.elf
+ 
+arm-none-eabi-size  i2c_oled.elf 
+arm-none-eabi-objdump -h -S i2c_oled.elf  > "i2c_oled.list"
+   text	   data	    bss	    dec	    hex	filename
+  10232	     12	   2684	  12928	   3280	i2c_oled.elf
+Finished building: default.size.stdout
+ 
+Finished building: i2c_oled.list
+ 
+
+00:18:25 Build Finished. 0 errors, 5 warnings. (took 1s.465ms)
+

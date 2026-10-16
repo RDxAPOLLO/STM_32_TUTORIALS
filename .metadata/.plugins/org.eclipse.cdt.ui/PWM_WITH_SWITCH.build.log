@@ -1,0 +1,10 @@
+15:55:33 **** Incremental Build of configuration Debug for project PWM_WITH_SWITCH ****
+make -j16 all 
+arm-none-eabi-size  PWM_WITH_SWITCH.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12076	     16	   2632	  14724	   3984	PWM_WITH_SWITCH.elf
+Finished building: default.size.stdout
+ 
+
+15:55:34 Build Finished. 0 errors, 0 warnings. (took 916ms)
+

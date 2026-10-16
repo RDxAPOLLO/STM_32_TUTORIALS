@@ -1,0 +1,69 @@
+15:13:46 **** Incremental Build of configuration Debug for project uart_interuupt ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F072xB -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:1:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+    1 |   GPIO_InitStruct.Pull = GPIO_NOPULL;
+      |                  ^
+../Core/Src/main.c:3:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+    3 |   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^
+../Core/Src/main.c:5:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+    5 |   GPIO_InitStruct.Alternate = GPIO_AF3_TSC;
+      |                  ^
+../Core/Src/main.c:7:23: error: expected ')' before '&' token
+    7 |   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+      |                       ^~
+      |                       )
+../Core/Src/main.c:13:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   13 |   GPIO_InitStruct.Pin = I2C2_SCL_Pin|I2C2_SDA_Pin;
+      |                  ^
+../Core/Src/main.c:15:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   15 |   GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+      |                  ^
+../Core/Src/main.c:17:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   17 |   GPIO_InitStruct.Pull = GPIO_NOPULL;
+      |                  ^
+../Core/Src/main.c:19:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   19 |   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+      |                  ^
+../Core/Src/main.c:21:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   21 |   GPIO_InitStruct.Alternate = GPIO_AF1_I2C2;
+      |                  ^
+../Core/Src/main.c:23:23: error: expected ')' before '&' token
+   23 |   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+      |                       ^~
+      |                       )
+../Core/Src/main.c:29:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   29 |   GPIO_InitStruct.Pin = SPI2_SCK_Pin|SPI2_MISO_Pin|SPI2_MOSI_Pin;
+      |                  ^
+../Core/Src/main.c:31:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   31 |   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+      |                  ^
+../Core/Src/main.c:33:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   33 |   GPIO_InitStruct.Pull = GPIO_NOPULL;
+      |                  ^
+../Core/Src/main.c:35:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   35 |   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+      |                  ^
+../Core/Src/main.c:37:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   37 |   GPIO_InitStruct.Alternate = GPIO_AF0_SPI2;
+      |                  ^
+../Core/Src/main.c:39:23: error: expected ')' before '&' token
+   39 |   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+      |                       ^~
+      |                       )
+../Core/Src/main.c:49:1: error: expected identifier or '(' before '}' token
+   49 | }
+      | ^
+../Core/Src/main.c:55:30: error: unknown type name 'UART_HandleTypeDef'
+   55 | void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:83:3: warning: implicit declaration of function '__disable_irq' [-Wimplicit-function-declaration]
+   83 |   __disable_irq();
+      |   ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+15:13:47 Build Failed. 19 errors, 1 warnings. (took 610ms)
+

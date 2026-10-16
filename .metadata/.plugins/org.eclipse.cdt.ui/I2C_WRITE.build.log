@@ -1,0 +1,17 @@
+08:53:32 **** Incremental Build of configuration Debug for project I2C_WRITE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F072xB -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "I2C_WRITE.elf" @"objects.list"   -mcpu=cortex-m0 -T"D:\stm32_tuitorials\I2C_WRITE\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_WRITE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2C_WRITE.elf
+ 
+arm-none-eabi-size  I2C_WRITE.elf 
+arm-none-eabi-objdump -h -S I2C_WRITE.elf  > "I2C_WRITE.list"
+   text	   data	    bss	    dec	    hex	filename
+  12136	     28	   2652	  14816	   39e0	I2C_WRITE.elf
+Finished building: default.size.stdout
+ 
+Finished building: I2C_WRITE.list
+ 
+
+08:53:36 Build Finished. 0 errors, 0 warnings. (took 4s.195ms)
+
